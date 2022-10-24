@@ -1,5 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "../srcs/lib_alg.h"
 #include "minunit.h"
 
 int	a_plus_b(int a, int b);
