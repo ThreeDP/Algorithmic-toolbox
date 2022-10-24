@@ -10,7 +10,8 @@ L_GREENB		=			'\033[1;32m'
 ################ LIBRARY	##################
 NAME 			= 			lib_alg.a
 ################ MANDATORY	##################
-SRCS 			=			APlusB.c	MaxPairwiseProduct.c
+SRCS 			=			a_plus_b.c	max_pairwise_product.c \
+						max_pairwise_product_fast.c
 ################ OTHERs		##################
 FLAGS 			=			-Wall -Werror -Wextra
 HEADER 			=	 		lib_alg.h
