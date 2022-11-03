@@ -7,11 +7,11 @@ static int	cmp_indx(const size_t *numbers, size_t actual, size_t max)
 	return (0);
 }
 
-size_t	max_pairwise_product_fast(const size_t *numbers, size_t size)
+size_t	max_pairwise_product_fast(const size_t *nums, int size)
 {
-	size_t	frt_indx;
-	size_t	sec_indx;
-	size_t	i;
+	int	frt_indx;
+	int	sec_indx;
+	int	i;
 
 	i = 0;
 	frt_indx = -1;
@@ -21,8 +21,8 @@ size_t	max_pairwise_product_fast(const size_t *numbers, size_t size)
 	i = 0;
 	sec_indx = -1;
 	while (i < size)	
-		if (cmp_indx(nums, i, frt_indx)
-		&& (sec_indx == -1) || (nums[i] > nums[sec_indx]))
+		if (cmp_indx(nums, i, frt_indx) &&
+				((sec_indx == -1) || (nums[i] > nums[sec_indx])))
 			sec_indx = i;
 	return (nums[frt_indx] * nums[sec_indx]);
 }
