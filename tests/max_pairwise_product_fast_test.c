@@ -35,7 +35,7 @@ MU_TEST_SUITE(passing_2_elements_and_numbers_100000_90000_shouuld_be_9000000000)
 	//ARRANGE
 	int		i;
 	int		*ptr;
-	int		num_elements;
+	size_t	num_elements;
 	size_t	array[] = {100000, 90000};
 	size_t	expected_result;
 	size_t	result;
