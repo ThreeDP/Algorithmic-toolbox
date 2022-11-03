@@ -1,7 +1,6 @@
 #include "../srcs/lib_alg.h"
 #include "minunit.h"
 
-int	a_plus_b(int a, int b);
 
 MU_TEST_SUITE(passing_10_plus_45_should_be_55)
 {

@@ -1,8 +1,6 @@
 #include "../srcs/lib_alg.h"
 #include "minunit.h"
 
-size_t	max_pairwise_product(const size_t *numbers, size_t size);
-
 MU_TEST_SUITE(passing_6_elements_and_numbers_1_4_5_25_60_3_shouuld_be_1500)
 {
 	//ARRANGE
