@@ -1,6 +1,6 @@
 #include "lib_alg.h"
 
-static int	cmp_indx(const size_t *numbers, size_t actual, size_t max)
+static int	cmp_indx(const size_t *numbers, int actual, int max)
 {
 	if (numbers[actual] == numbers[max])
 		return (1);
@@ -16,13 +16,16 @@ size_t	max_pairwise_product_fast(const size_t *nums, int size)
 	i = 0;
 	frt_indx = -1;
 	while (i < size)
-		if ((frt_indx == -1) || (nums[i++] > nums[frt_indx]))
+	{
+		if ((nums[i++] > nums[frt_indx]) || (frt_indx == -1))
 			frt_indx = i;
+		i++;
+	}
 	i = 0;
 	sec_indx = -1;
 	while (i < size)	
 		if (cmp_indx(nums, i, frt_indx) &&
-				((sec_indx == -1) || (nums[i++] > nums[sec_indx])))
+				((nums[i++] > nums[sec_indx]) || (sec_indx == -1)))
 			sec_indx = i;
 	return (nums[frt_indx] * nums[sec_indx]);
 }
