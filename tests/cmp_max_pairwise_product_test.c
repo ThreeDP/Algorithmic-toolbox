@@ -16,6 +16,7 @@ MU_TEST_SUITE(passing_6_elements_and_numbers_1_4_5_25_60_3_shouuld_be_1500)
 
 	//ACT
 	num_elements = 6;
+	TIMEFUNC(&start, &end, )
 	time(&start);
 	slow = max_pairwise_product(array, num_elements);
 	time(&end);
