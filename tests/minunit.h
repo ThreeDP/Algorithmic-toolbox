@@ -215,8 +215,8 @@ static void (*minunit_teardown)(void) = NULL;
 	time_t minunit_tmp_e;\
 	time_t minunit_tmp_r;\
 	minunit_assert++;\
-	minunit_tmp_e = (start);\
-	minunit_tmp_r = (end);\
+	minunit_tmp_e = fast;\
+	minunit_tmp_r = slow;\
 	if (minunit_tmp_e > minunit_tmp_r) {\
 		printf(BOLDGREEN("."));\
 	} else {\
