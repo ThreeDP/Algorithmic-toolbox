@@ -61,7 +61,6 @@ MU_TEST_SUITE(passing_10_elements_and_numbers_7_5_14_2_8_8_10_1_2_3_should_be_14
 
 	//ACT
 	num_elements = 10;
-	expected_result = 140;
 	time(&start);
 	slow = max_pairwise_product(array, num_elements);
 	time(&end);
