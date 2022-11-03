@@ -20,13 +20,15 @@ size_t	max_pairwise_product_fast(const size_t *nums, int size)
 		if (nums[i] > nums[frt_indx] || (frt_indx == -1))
 			frt_indx = i;
 		i++;
-		printf("\n%i", frt_indx);
 	}
 	i = 0;
 	sec_indx = -1;
 	while (i < size)
+	{
 		if ((nums[i++] > nums[sec_indx] || (sec_indx == -1)) && cmp_indx(nums, i, frt_indx))
 			sec_indx = i;
+		i++;
+	}
 	printf("\nMax\t%zu\nSec\t%zu\n", nums[frt_indx], nums[sec_indx]);
 	return (nums[frt_indx] * nums[sec_indx]);
 }
