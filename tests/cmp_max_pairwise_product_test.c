@@ -52,8 +52,6 @@ MU_TEST_SUITE(passing_10_elements_and_numbers_7_5_14_2_8_8_10_1_2_3_should_be_14
 	//ARRANGE
 	int		num_elements;
 	size_t	array[] = {7, 5, 14, 2, 8, 8, 10, 1, 2, 3};
-	size_t	expected_result;
-	size_t	result;
 	size_t	slow;
 	size_t	fast;
 	clock_t	start;
