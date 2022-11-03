@@ -212,8 +212,8 @@ static void (*minunit_teardown)(void) = NULL;
 )
 
 #define mu_assert_time(fast, slow) MU__SAFE_BLOCK(\
-	time_t minunit_tmp_e;\
-	time_t minunit_tmp_r;\
+	double minunit_tmp_e;\
+	double minunit_tmp_r;\
 	minunit_assert++;\
 	minunit_tmp_e = fast;\
 	minunit_tmp_r = slow;\
