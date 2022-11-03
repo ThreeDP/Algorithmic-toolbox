@@ -77,7 +77,7 @@ MU_TEST_SUITE(passing_10_elements_and_numbers_7_5_14_2_8_8_10_1_2_3_should_be_14
 	printf("\n%zu", (end - start));
 
 	//ASSERT
-	mu_assert_int_eq(expected_result, result);
+	mu_assert_int_eq(fast, slow);
 	mu_assert_time(t_fast, t_slow);
 }
 
