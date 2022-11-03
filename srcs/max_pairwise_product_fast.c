@@ -2,7 +2,7 @@
 
 int	cmp_indx(const size_t *numbers, int actual, int max)
 {
-	if (!(numbers[actual] == numbers[max]))
+	if (numbers[actual] != numbers[max])
 		return (1);
 	return (0);
 }
