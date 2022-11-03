@@ -220,7 +220,7 @@ static void (*minunit_teardown)(void) = NULL;
 	if (minunit_tmp_e > minunit_tmp_r) {\
 		printf(BOLDGREEN("."));\
 	} else {\
-		snprintf(minunit_last_message, MINUNIT_MESSAGE_LEN, PRINTRED("%s failed:\n\t%s:%d:\nFast algorithm\t%.*g\nSlow algorithm\t%.*g"), __func__, __FILE__, __LINE__, minunit_tmp_e, minunit_tmp_r);\
+		snprintf(minunit_last_message, MINUNIT_MESSAGE_LEN, PRINTRED("%s failed:\n\t%s:%d:\nFast algorithm\t%.12f\nSlow algorithm\t%.12f"), __func__, __FILE__, __LINE__, minunit_tmp_e, minunit_tmp_r);\
 		minunit_status = 1;\
 		return;\
 	}\
