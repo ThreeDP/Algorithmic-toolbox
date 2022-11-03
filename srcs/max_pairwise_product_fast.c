@@ -29,6 +29,5 @@ size_t	max_pairwise_product_fast(const size_t *nums, int size)
 			sec_indx = i;
 		i++;
 	}
-	printf("\nMax\t%zu\nSec\t%zu\n", nums[frt_indx], nums[sec_indx]);
 	return (nums[frt_indx] * nums[sec_indx]);
 }

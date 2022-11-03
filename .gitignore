@@ -1,3 +1,4 @@
 a.out
 *.s*
 *.o
+lib_alg.a

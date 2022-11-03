@@ -1,10 +1,10 @@
 #include "lib_alg.h"
 
-size_t	max_pairwise_product(const size_t *numbers, size_t size)
+size_t	max_pairwise_product(const size_t *numbers, int size)
 {
 	size_t	result;
-	size_t	i;
-	size_t	j;
+	int		i;
+	int		j;
 
 	i = 0;
 	result = 0;
