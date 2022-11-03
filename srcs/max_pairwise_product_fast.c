@@ -7,7 +7,7 @@ static int	cmp_indx(const size_t *numbers, size_t actual, size_t max)
 	return (0);
 }
 
-size_t	max_pairwise_product_fast(const size_t *numbers, size_t size)
+size_t	max_pairwise_product_fast(const size_t *nums, size_t size)
 {
 	size_t	frt_indx;
 	size_t	sec_indx;
