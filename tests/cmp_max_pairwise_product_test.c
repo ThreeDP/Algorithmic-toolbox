@@ -19,7 +19,7 @@ MU_TEST_SUITE(passing_6_elements_and_numbers_1_4_5_25_60_3_shouuld_be_1500)
 	time(&start);
 	slow = max_pairwise_product(array, num_elements);
 	time(&end);
-	printf("\ns\t%zu\t%f\ne\t%zu\t%f\n", start, start, end, end);
+	printf("\ns\t%zu\t%f\ne\t%zu\t%f\n", start, (double)start, end, (double)end);
 	t_slow = (double)(end - start);
 	printf("\n%.20f", t_slow);
 	time(&start);
