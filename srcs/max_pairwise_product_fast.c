@@ -25,7 +25,7 @@ size_t	max_pairwise_product_fast(const size_t *nums, int size)
 	sec_indx = -1;
 	while (i < size)
 	{
-		if ((nums[i++] > nums[sec_indx] || (sec_indx == -1)) && cmp_indx(nums, i, frt_indx))
+		if ((nums[i] > nums[sec_indx] || (sec_indx == -1)) && cmp_indx(nums, i, frt_indx))
 			sec_indx = i;
 		i++;
 	}
