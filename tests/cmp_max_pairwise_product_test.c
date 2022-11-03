@@ -11,8 +11,8 @@ MU_TEST_SUITE(passing_6_elements_and_numbers_1_4_5_25_60_3_shouuld_be_1500)
 	size_t	fast;
 	time_t	start;
 	time_t	end;
-	time_t	t_fast;
-	time_t	t_slow;
+	double	t_fast;
+	double	t_slow;
 
 	//ACT
 	num_elements = 6;
