@@ -20,10 +20,12 @@ MU_TEST_SUITE(passing_6_elements_and_numbers_1_4_5_25_60_3_shouuld_be_1500)
 	slow = max_pairwise_product(array, num_elements);
 	time(&end);
 	t_slow = (double)(start - end);
+	printf("\n%.12f", t_slow);
 	time(&start);
 	fast = max_pairwise_product_fast(array, num_elements);
 	time(&end);
 	t_fast = (double)(start - end);
+	printf("\n%.12f", t_fast);
 
 	//ASSERT
 	mu_assert_int_eq(fast, slow);
