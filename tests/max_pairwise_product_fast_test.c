@@ -6,9 +6,9 @@ size_t	max_pairwise_product(const size_t *numbers, size_t size);
 MU_TEST_SUITE(passing_6_elements_and_numbers_1_4_5_25_60_3_shouuld_be_1500)
 {
 	//ARRANGE
-	size_t	i;
-	size_t	*ptr;
-	size_t	num_elements;
+	int		i;
+	size_t		*ptr;
+	int		num_elements;
 	size_t	array[] = {1, 4, 5, 25, 60, 3};
 	size_t	expected_result;
 	size_t	result;
@@ -34,8 +34,8 @@ MU_TEST_SUITE(passing_2_elements_and_numbers_100000_90000_shouuld_be_9000000000)
 {
 	//ARRANGE
 	int		i;
-	int		*ptr;
-	size_t	num_elements;
+	size_t		*ptr;
+	int		num_elements;
 	size_t	array[] = {100000, 90000};
 	size_t	expected_result;
 	size_t	result;
@@ -60,9 +60,9 @@ MU_TEST_SUITE(passing_2_elements_and_numbers_100000_90000_shouuld_be_9000000000)
 MU_TEST_SUITE(passing_10_elements_and_numbers_7_5_14_2_8_8_10_1_2_3_should_be_140)
 {
 	//ARRANGE
-	size_t	i;
-	size_t	*ptr;
-	size_t	num_elements;
+	int		i;
+	size_t		*ptr;
+	int		num_elements;
 	size_t	array[] = {7, 5, 14, 2, 8, 8, 10, 1, 2, 3};
 	size_t	expected_result;
 	size_t	result;
