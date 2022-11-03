@@ -23,7 +23,7 @@ MU_TEST_SUITE(passing_6_elements_and_numbers_1_4_5_25_60_3_shouuld_be_1500)
 	time(&start);
 	fast = max_pairwise_product_fast(array, num_elements);
 	time(&end);
-	t_fast = (double)(end - start);
+	t_fast = (double)(end - start) / CLOCKS_PER_SEC;
 
 	//ASSERT
 	mu_assert_int_eq(fast, slow);
@@ -64,14 +64,11 @@ MU_TEST_SUITE(passing_10_elements_and_numbers_7_5_14_2_8_8_10_1_2_3_should_be_14
 	time(&start);
 	slow = max_pairwise_product(array, num_elements);
 	time(&end);
-	printf("\ns\t%zu\t%.45f\ne\t%zu\t%.45f\n", start, (double)start / CLOCKS_PER_SEC, end, (double)end / CLOCKS_PER_SEC);
 	t_slow = (double)(end - start) / CLOCKS_PER_SEC;
-	printf("\n%.45f", t_slow);
 	time(&start);
 	fast = max_pairwise_product_fast(array, num_elements);
 	time(&end);
-	t_fast = (double)(end - start);
-	printf("\n%zu", (end - start));
+	t_fast = (double)(end - start) / CLOCKS_PER_SEC;
 
 	//ASSERT
 	mu_assert_int_eq(fast, slow);
