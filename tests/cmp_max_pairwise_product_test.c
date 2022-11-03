@@ -9,8 +9,8 @@ MU_TEST_SUITE(passing_6_elements_and_numbers_1_4_5_25_60_3_shouuld_be_1500)
 	size_t	array[] = {1, 4, 5, 25, 60, 3};
 	size_t	slow;
 	size_t	fast;
-	time_t	start;
-	time_t	end;
+	clock_t	start;
+	clock_t	end;
 	double	t_fast;
 	double	t_slow;
 
@@ -19,8 +19,8 @@ MU_TEST_SUITE(passing_6_elements_and_numbers_1_4_5_25_60_3_shouuld_be_1500)
 	time(&start);
 	slow = max_pairwise_product(array, num_elements);
 	time(&end);
-	printf("\ns\t%zu\t%f\ne\t%zu\t%f\n", start, (double)start, end, (double)end);
-	t_slow = (double)(end - start);
+	printf("\ns\t%zu\t%f\ne\t%zu\t%f\n", start, (double)start / CLOCKS_PER_SEC, end, (double)end / CLOCKS_PER_SEC);
+	t_slow = (double)(end - start) / CLOCKS_PER_SEC;
 	printf("\n%.20f", t_slow);
 	time(&start);
 	fast = max_pairwise_product_fast(array, num_elements);
