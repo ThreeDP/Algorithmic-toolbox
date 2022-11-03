@@ -211,6 +211,21 @@ static void (*minunit_teardown)(void) = NULL;
 	}\
 )
 
+#define mu_assert_time(fast, slow) MU__SAFE_BLOCK(\
+	double minunit_tmp_e;\
+	double minunit_tmp_r;\
+	minunit_assert++;\
+	minunit_tmp_e = (start);\
+	minunit_tmp_r = (end);\
+	if (minunit_tmp_e > minunit_tmp_r) {\
+		printf(BOLDGREEN(".'"));\
+	} else {\
+		snprintf(minunit_last_message, MINUNIT_MESSAGE_LEN, PRINTRED("%s failed:\n\t%s:%d: %.*g expected but was %.*g"), __func__, __FILE__, __LINE__, minunit_tmp_e, minunit_tmp_r);\
+		minunit_status = 1;\
+		return;\
+	}\
+)
+
 #define mu_assert_string_eq(expected, result) MU__SAFE_BLOCK(\
 	const char* minunit_tmp_e = expected;\
 	const char* minunit_tmp_r = result;\
